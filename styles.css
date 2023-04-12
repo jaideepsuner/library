@@ -1,7 +1,14 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  padding: 1rem 20rem 1rem 20rem;
+  background-color: rgb(168, 255, 226);
+}
+
+.bodyWrap {
+  max-width: 60rem;
+  margin: auto;
+  padding: 2rem;
+  overflow: hidden;
 }
 
 .nav {
@@ -13,4 +20,46 @@ body {
   list-style-type: none;
   font-size: 2rem;
   font-weight: 800;
+}
+
+.titleInput,
+.authorInput {
+  padding: 0.25rem;
+  margin: 0.5rem;
+  font-size: 1.25rem;
+  display: block;
+}
+
+.readInputDiv label {
+  font-size: 1.25rem;
+  margin: 0.25rem;
+}
+
+.addBtn {
+  font-size: 1.25rem;
+  margin: 1rem 0 1rem 0.5rem;
+  padding: 0.5rem;
+}
+
+.books {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card-el {
+  font-size: 1.5rem;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(141, 141, 141);
+  border-radius: 2rem;
+  display: block;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.isRead-el {
+  line-height: 3rem;
+  margin: auto 1rem auto 1rem;
+  background-color: rgb(149, 247, 154);
+  border-radius: 2rem;
 }

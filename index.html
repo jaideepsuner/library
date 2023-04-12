@@ -8,14 +8,29 @@
     <title>Library</title>
   </head>
   <body>
-    <nav class="nav">
-      <!-- <li>Jaideep Suner</li> -->
-      <li>library</li>
-    </nav>
     <div class="bodyWrap">
+      <nav class="nav">
+        <!-- <li>Jaideep Suner</li> -->
+        <li>library</li>
+      </nav>
       <input type="text" placeholder="Title" class="titleInput" />
       <input type="text" placeholder="Author" class="authorInput" />
-      <button class="addBtn">Add Book</button>
+      <div class="readInputDiv">
+        <label>
+          <input type="radio" name="myRadio" class="readInput" value="Read" />
+          Read
+        </label>
+        <label>
+          <input
+            type="radio"
+            name="myRadio"
+            class="readInput"
+            value="Not Read"
+          />
+          Not Read
+        </label>
+      </div>
+      <button class="addBtn" onclick="addBookToLibrary()">Add Book</button>
       <div class="books"></div>
     </div>
   </body>

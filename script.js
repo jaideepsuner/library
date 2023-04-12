@@ -2,20 +2,32 @@ const addBtn = document.querySelector('.addBtn')
 const titleInput = document.querySelector('.titleInput')
 const authorInput = document.querySelector('.authorInput')
 const booksDiv = document.querySelector('.books')
+const readInput = document.querySelector('.readInput')
 
-const bookList = []
+let myLibrary = []
 
-addBtn.addEventListener('click', () => {
-  bookList.push(
-    (book = {
+// function Book() {}
+
+function addBookToLibrary() {
+  myLibrary.push(
+    (Book = {
       title: titleInput.value,
       author: authorInput.value,
+      isRead: readInput.value,
     })
   )
-  console.log(bookList)
-  const newBook = document.createElement('p')
-  for (let i = 0; i < bookList.length; i++) {
-    newBook.textContent = bookList[i].title
-    booksDiv.appendChild(newBook)
+
+  const cardEl = document.createElement('div')
+  cardEl.className = 'card-el'
+  for (let i = 0; i < myLibrary.length; i++) {
+    cardEl.innerHTML = `
+    <p class='title-el'>"${myLibrary[i].title}"</p> 
+    <p class='author-el'>- ${myLibrary[i].author}</p>
+    <p class='isRead-el'>${myLibrary[i].isRead}</p>
+    `
+    booksDiv.appendChild(cardEl)
   }
-})
+
+  titleInput.value = ''
+  authorInput.value = ''
+}
